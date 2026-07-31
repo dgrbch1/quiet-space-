@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuietSpace helps remote workers find calm, reliable places to focus.">
+  <title>QuietSpace — Find your focus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#spaces">Skip to spaces</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="QuietSpace home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      QuietSpace
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#spaces">Explore</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#for-hosts">For hosts</a>
+      <button class="saved-button" type="button" id="open-saved">Saved <span id="saved-count">0</span></button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Work well, wherever you are</p>
+        <h1 id="hero-title">Your next great idea needs a <em>quiet place.</em></h1>
+        <p class="hero-intro">Discover work-friendly cafés, calm libraries, and inspiring coworking spaces—reviewed for noise, Wi-Fi, and comfort.</p>
+        <form class="search-panel" id="search-form">
+          <label>
+            <span>Where do you want to work?</span>
+            <input id="search-input" type="search" placeholder="Try Brooklyn or Soho" autocomplete="off">
+          </label>
+          <button type="submit">Find a space <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="trust-row" aria-label="Service highlights">
+          <span><b>4.9</b> average rating</span>
+          <span><b>320+</b> verified spaces</span>
+          <span><b>Free</b> to explore</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Featured workspace: The Green Room">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="window-card">
+          <div class="window-scene" aria-hidden="true">
+            <div class="plant"><i></i><i></i><i></i><span></span></div>
+            <div class="desk"><i></i></div>
+            <div class="chair"></div>
+          </div>
+          <div class="featured-info">
+            <div><span>Featured in Brooklyn</span><strong>The Green Room</strong></div>
+            <span class="rating">★ 4.9</span>
+          </div>
+        </div>
+        <div class="floating-note note-one"><span class="status-dot"></span> Quiet right now</div>
+        <div class="floating-note note-two"><b>94</b><span>Focus score</span></div>
+      </div>
+    </section>
+
+    <section class="discovery" id="spaces" aria-labelledby="spaces-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Curated for deep work</p>
+          <h2 id="spaces-title">Find your kind of quiet.</h2>
+        </div>
+        <p>Every space is checked for the details that make or break a productive day.</p>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter spaces by type">
+        <button class="filter-button active" type="button" data-filter="all">All spaces</button>
+        <button class="filter-button" type="button" data-filter="cafe">Cafés</button>
+        <button class="filter-button" type="button" data-filter="coworking">Coworking</button>
+        <button class="filter-button" type="button" data-filter="library">Libraries</button>
+      </div>
+
+      <div class="space-grid" id="space-grid">
+        <article class="space-card" data-type="cafe" data-name="Juniper House Brooklyn">
+          <div class="space-art art-juniper" aria-hidden="true"><span class="arch"></span><span class="table"></span><span class="leaf leaf-a"></span><span class="leaf leaf-b"></span></div>
+          <button class="heart" type="button" aria-label="Save Juniper House" aria-pressed="false">♡</button>
+          <div class="space-content">
+            <div class="space-meta"><span>Café · Brooklyn</span><strong>★ 4.9</strong></div>
+            <h3>Juniper House</h3>
+            <p>Sunlit corners, endless outlets, and a no-calls quiet zone upstairs.</p>
+            <div class="amenities"><span>Quiet</span><span>Fast Wi-Fi</span><span>$$</span></div>
+            <button class="book-button" type="button" data-space="Juniper House" data-price="12">Book a desk · $12</button>
+          </div>
+        </article>
+
+        <article class="space-card" data-type="coworking" data-name="Soft Focus Soho">
+          <div class="space-art art-focus" aria-hidden="true"><span class="orb"></span><span class="bench"></span><span class="lamp"></span></div>
+          <button class="heart" type="button" aria-label="Save Soft Focus" aria-pressed="false">♡</button>
+          <div class="space-content">
+            <div class="space-meta"><span>Coworking · SoHo</span><strong>★ 4.8</strong></div>
+            <h3>Soft Focus</h3>
+            <p>Design-led studios with silent rooms, phone booths, and unlimited coffee.</p>
+            <div class="amenities"><span>Very quiet</span><span>Calls OK</span><span>$$$</span></div>
+            <button class="book-button" type="button" data-space="Soft Focus" data-price="28">Book a desk · $28</button>
+          </div>
+        </article>
+
+        <article class="space-card" data-type="library" data-name="Civic Reading Room Midtown">
+          <div class="space-art art-library" aria-hidden="true"><span class="shelf shelf-a"></span><span class="shelf shelf-b"></span><span class="reading-table"></span></div>
+          <button class="heart" type="button" aria-label="Save Civic Reading Room" aria-pressed="false">♡</button>
+          <div class="space-content">
+            <div class="space-meta"><span>Library · Midtown</span><strong>★ 4.7</strong></div>
+            <h3>Civic Reading Room</h3>
+            <p>A landmark reading room with generous desks and beautiful natural light.</p>
+            <div class="amenities"><span>Silent</span><span>Free</span><span>No calls</span></div>
+            <button class="book-button" type="button" data-space="Civic Reading Room" data-price="0">View availability · Free</button>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No spaces match that search yet. Try another neighborhood.</p>
+    </section>
+
+    <section class="how" id="how-it-works" aria-labelledby="how-title">
+      <div class="how-intro">
+        <p class="eyebrow">Made for real workdays</p>
+        <h2 id="how-title">Less searching.<br>More focusing.</h2>
+        <p>We turn the things remote workers care about into clear, useful signals.</p>
+      </div>
+      <ol class="steps">
+        <li><span>01</span><div><h3>Choose your vibe</h3><p>Filter by noise, neighborhood, price, and the amenities you need.</p></div></li>
+        <li><span>02</span><div><h3>Know before you go</h3><p>See verified Wi-Fi speeds, live noise levels, and honest community notes.</p></div></li>
+        <li><span>03</span><div><h3>Settle in</h3><p>Reserve a desk in seconds or save a space for your next focused day.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="host-banner" id="for-hosts">
+      <p class="eyebrow">Have a space people love?</p>
+      <h2>Turn empty seats into a thriving workday community.</h2>
+      <a href="mailto:hello@quietspace.example">List your space <span aria-hidden="true">↗</span></a>
+      <div class="host-shape shape-one" aria-hidden="true"></div>
+      <div class="host-shape shape-two" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>QuietSpace</a>
+    <p>Better places for better workdays.</p>
+    <div><a href="#spaces">Explore</a><a href="#how-it-works">About</a><a href="mailto:hello@quietspace.example">Contact</a></div>
+    <small>Concept project designed and built by Christopher.</small>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="booking-drawer" id="booking-drawer" aria-labelledby="booking-title" aria-hidden="true">
+    <button class="drawer-close" type="button" id="close-drawer" aria-label="Close booking panel">×</button>
+    <p class="eyebrow">Reserve your focus time</p>
+    <h2 id="booking-title">Book <span id="booking-space">a space</span></h2>
+    <form id="booking-form">
+      <label>Date<input type="date" id="booking-date" required></label>
+      <label>Start time<select id="booking-time"><option>9:00 AM</option><option>11:00 AM</option><option>1:00 PM</option><option>3:00 PM</option></select></label>
+      <label>Duration<select id="booking-duration"><option value="1">1 hour</option><option value="2">2 hours</option><option value="4">Half day · 4 hours</option><option value="8">Full day · 8 hours</option></select></label>
+      <div class="booking-total"><span>Estimated total</span><strong id="booking-total">$0</strong></div>
+      <button type="submit">Confirm reservation</button>
+      <p class="form-note">Concept demo—no payment will be collected.</p>
+    </form>
+    <div class="success-message" id="success-message" hidden><span>✓</span><h3>Your desk is held!</h3><p>This interaction demonstrates the booking flow for the concept.</p></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
